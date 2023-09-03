@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+ 
+</head>
+<body>
+  <h1>
+    Fill the form given below
+  </h1>
+  <div class="container">
+    <form action="{{url_for('predict3')}}"method="post">
+      <input type="text" style="width: 250px;" name="GRE Score" placeholder="GRE Score (Out of 340) " required> <br><br>
+      <input type="text" style="width: 250px;" name="TOEFL Score " placeholder="TOEFL Score ( Out of 120)  " required> <br><br>
+      <input type="text" style="width: 250px;" name="University Rating" placeholder="University Rating ( Between 1 to 5 )" required> <br><br>
+      <input type="text" style="width: 250px;" name="SOP" placeholder="SOP ( Between 1 to 5)" required> <br><br>
+      <input type="text" style="width: 250px;" name="LOR" placeholder="LOR (Between 1 to 5)    " required> <br><br>
+      <input type="text" style="width: 250px;" name="CGPA" placeholder="CGPA (Out of 10)" required> <br><br>
+      <input type="text" style="width: 350px;" name="Research Involement" placeholder="Research Involement (1 if student has research experience, else 0)" required>
+       <br><br>
+      <button type="submit" class="btn">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    {{ prediction_text }}
+  </div>
+<br><br><br>
+
+</body>
+</html>
+
+ 
